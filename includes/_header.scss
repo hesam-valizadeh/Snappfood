@@ -1,0 +1,209 @@
+//header
+header {
+  height: $height-header;
+  background-image: url("../img/000.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slide 80s infinite;
+
+  .right {
+    margin-top: $my;
+
+    a.account {
+      color: $text-light;
+      border: 1px solid $text-light;
+      @include border-radius(10px);
+      padding-left: 4px;
+      font-size: ($font-size)-2px;
+
+      i {
+        padding: 0 6px;
+      }
+    }
+
+    a#EN {
+      padding-right: 10px;
+      color: $text-light;
+    }
+  }
+
+
+  .center {
+    text-align: $text-center;
+    color: $text-light;
+    margin-top: $my*5;
+
+    .area-search {
+      background: transparentize($bg-dark, .5);
+      @include border-radius(5px);
+      padding: 10px 0px 30px 0px;
+      margin-top: ($my)-20px;
+
+      .search-input {
+        width: $size-inputs;
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid $bg-secondary;
+        padding: 10px 5px;
+        font-size: $font-size;
+
+        &::placeholder {
+          color: darken($text-light, 22%);
+        }
+      }
+
+      .search-btn {
+        @include them-btn;
+      }
+    }
+
+    .img-box {
+      margin: $my*2 5px;
+
+      a {
+        margin: 0 2px;
+
+      }
+
+      > a img {
+        margin: 0 10px;
+      }
+
+      a div.number {
+        display: inline;
+        position: relative;
+
+        p {
+          position: absolute;
+          bottom: 5px;
+          left: 85px;
+          display: inline;
+          line-height: 54px;
+          width: 55px;
+          height: 55px;
+          font-weight: 700;
+          background: $bg-light;
+          color: $them;
+          border: 2px solid $them;
+          @include border-radius(50%);
+        }
+      }
+    }
+
+    .row span {
+      padding: 0 47px;
+    }
+  }
+
+
+  .left {
+    .snapplogo {
+      background-image: url("../img/snappfood_logo.svg");
+      background-position: 5px 0px;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      filter: brightness(0) invert(1);
+      margin: $my 5px 0 $my;
+
+
+    }
+  }
+}
+
+
+//modal styles
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 111111;
+  opacity: 0;
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.9s ease-in 0.3s;
+
+  }
+
+}
+
+.modal-content {
+  @include box-shadow(0px, 1px, 6px, 2px, #ccc);
+  width: $width-modal-content;
+  height: $height-modal-content;
+  margin: 6% auto;
+  background-color: $bg-default;
+  @include border-radius(5px);
+
+  a {
+    float: left;
+    color: #000;
+    position: relative;
+    left: 0px;
+    top: -50px;
+    font-size: 36px;
+  }
+
+  span {
+    display: block;
+    background: #ccc;
+    text-align: $text-center;
+  }
+
+  h5 {
+    text-align: $text-center;
+  }
+
+  button {
+    @include them-btn;
+    text-align: $text-center;
+    margin: $my 25px;
+    padding: 6px 130px;
+  }
+
+  .search-form {
+    input {
+      outline: none;
+      width: $size-inputs + 170px;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: $bg-default;
+      margin: 0 45px;
+
+      &:focus {
+        border-bottom: 2px solid $them;
+
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  0%{
+    background-image: url("../img/000.jpg");
+ }
+ 20% {
+    background-image: url("../img/111.jpg");
+  }
+  40% {
+    background-image: url("../img/333.jpg");
+  }
+  65% {
+    background-image: url("../img/444.jpg");
+  }
+  80% {
+    background-image: url("../img/222.jpg");
+  }
+  100%{
+    background-image: url("../img/000.jpg");
+  }
+}

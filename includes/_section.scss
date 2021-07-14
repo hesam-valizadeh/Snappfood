@@ -1,0 +1,108 @@
+div#content {
+  height: $height-content - 300px;
+  background: $bg-light;
+
+  h2 {
+    text-align: $text-center;
+
+    span {
+      font-size: $h3;
+      color: $them;
+    }
+  }
+
+  p {
+    text-align: $text-center;
+    font-size: $font-size;
+    color: $text-default;
+  }
+}
+
+
+div.app {
+  width: 75%;
+  height: $height-content;
+  background: $bg-light;
+  @include border-radius(5px);
+  @include box-shadow(5px, 6px, 10px, 10px, #cccccc);
+  margin: $my*5 auto;
+
+  h3 {
+    margin: $my 10px;
+
+    span {
+      color: $them;
+      font-size: $h3;
+    }
+  }
+
+  p {
+    margin: $my 10px;
+    text-align: justify;
+    font-size: $font-size;
+    color: $text-default;
+  }
+
+  input {
+    width: $size-inputs * 3;
+    padding: 8px 0;
+    float: right;
+    @include border-radius(0 3px 3px 0);
+    border: 1px solid $bg-secondary;
+  }
+
+  button {
+    float: right;
+    @include them-btn;
+    @include border-radius(3px 0 0 3px);
+  }
+
+  .iphonx {
+    position: relative;
+    top: -100px;
+    @include none;
+
+  }
+}
+
+
+.category {
+  height: $height-content;
+  background: #fff;
+  margin: $my 0;
+  padding: 120px 0;
+
+  img:hover {
+    @include box-shadow(0px, 2px, 3px, 0px, #000);
+  }
+
+  .cuisine {
+    padding: 27px 27px 40px 0;
+  }
+}
+
+
+.popular-box {
+  @extend .category;
+  padding: 60px 0;
+
+  h3 {
+
+    span {
+      font-size: $h3;
+
+      color: $them;
+    }
+  }
+
+  .popular {
+    padding: 10px 5px;
+  }
+
+  .popular-img img {
+    margin: $my*2 0;
+    width: 170px;
+    height: $height-content - 350px;
+    object-fit: scale-down;
+  }
+}

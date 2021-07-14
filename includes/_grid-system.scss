@@ -1,0 +1,119 @@
+//grid system columns
+//grid media query
+
+@media (min-width: $screen-sm-min) {
+  .container {
+    width: $container-sm-width;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .container {
+    width: $container-md-width;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .container {
+    width: $container-lg-width;
+  }
+}
+
+//grid container
+@for $i from 1 through 12 {
+  .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i} {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container-fluid {
+  padding-left: $container-padding-left;
+  padding-right: $container-padding-right;
+  margin-left: $container-margin-left;
+  margin-right: $container-margin-right;
+}
+
+.container {
+  padding-left: $container-padding-left;
+  padding-right: $container-padding-right;
+  margin-left: $container-margin-left;
+  margin-right: $container-margin-right;
+}
+
+//grid row
+.row {
+  margin-left: $row-margin-left;
+  margin-right: $row-margin-right;
+}
+
+/* xs grid class*/
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {
+    width: $i * 8.33333333%;
+  }
+  .col-xs-offset-#{$i} {
+    margin-right: $i * 8.33333333%;
+  }
+}
+
+/* sm grid class*/
+@media (min-width: $screen-sm-min) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: $i * 8.33333333%;
+      float: $float-right;
+
+    }
+    .col-sm-offset-#{$i} {
+      margin-right: $i * 8.33333333%;
+    }
+  }
+}
+
+/* md grid class*/
+@media (min-width: $screen-md-min) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: $i * 8.33333333%;
+      float: $float-right;
+
+    }
+    .col-md-offset-#{$i} {
+      margin-right: $i * 8.33333333%;
+    }
+  }
+}
+
+/* lg grid class*/
+@media (min-width: $screen-lg-min) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: $i * 8.33333333%;
+      float: $float-right;
+    }
+    .col-lg-offset-#{$i} {
+      margin-right: $i * 8.33333333%;
+    }
+  }
+
+}
+
+.container:before,
+.container:after,
+.row:after,
+.row:before,
+.container-fluid:before,
+.container-fluid:after {
+  display: table;
+  content: " ";
+}
+
+.container:after,
+.row:after,
+.container-fluid:after {
+  clear: both;
+}
+

@@ -1,0 +1,25 @@
+//border-radius
+@mixin border-radius($bdrs:3px){
+  -webkit-border-radius: $bdrs;
+  -moz-border-radius: $bdrs;
+  border-radius: $bdrs;
+}
+@mixin box-shadow($x:1px,$y:1px,$blur:1px,$z:1px,$color:$bg-secondary){
+  box-shadow:$x $y $blur $z $color;
+}
+@mixin them-btn(){
+
+  padding: $padding-btn;
+  color: $text-light;
+  background: $them;
+  @include border-radius();
+  &:hover {
+    background: darken($them, 20%);
+  }
+}
+@mixin none(){
+  @media only screen and(max-width: 990px) {
+    display: none;
+  }
+}
+

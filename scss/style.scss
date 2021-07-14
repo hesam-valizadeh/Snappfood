@@ -1,0 +1,81 @@
+@import "../includes/_public-vars";
+
+@import "../includes/_grid-system";
+
+@import "../includes/_public-mixins";
+
+@import "../includes/_public-finctions";
+
+@import "../includes/_header";
+
+@import "../includes/_section";
+
+@import "../includes/_footer";
+
+@font-face {
+  font-family: 'BYekan';
+  src: url('../fonts/BYekan.eot');
+  src: url('../fonts/BYekan.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/BYekan.woff') format('woff'),
+  url('../fonts/BYekan.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  direction: $direction;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'BYekan';
+  font-size: $font-size;
+  //.user-select();
+}
+
+body {
+  background:$bg-default;
+}
+
+a {
+  color: blue;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+input{
+  outline: none;
+}
+h1{
+  font-size: $h1;
+  padding: $py 0;
+}
+
+h2{
+  padding: $py 0;
+  font-size: $h2;
+}
+
+h3{
+  padding: $py 0;
+  font-size: $h3;
+}
+
+h4{
+  padding: $py 0;
+  font-size: $h4;
+}
+
+h5{
+  padding: $py 0;
+  font-size: $h5;
+}
+
+h6{
+  padding: $py 0;
+  font-size: $h6;
+}
